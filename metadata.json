@@ -1,0 +1,6 @@
+{
+  "name": "Structural Submittal Tracker",
+  "description": "Track project milestones, draft revisions, third-party and government review turnaround times, and log labor hours for structural submittals.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

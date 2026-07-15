@@ -1,0 +1,77 @@
+{
+  "collections": {
+    "users": {
+      "description": "Registered app users with authorization and admin roles",
+      "fields": {
+        "uid": "string",
+        "name": "string",
+        "email": "string",
+        "role": "string",
+        "status": "string ('Pending' | 'Approved' | 'Rejected')",
+        "isAdmin": "boolean",
+        "createdAt": "string (ISO timestamp)"
+      }
+    },
+    "projects": {
+      "description": "Structural submittal tracker projects",
+      "fields": {
+        "id": "string",
+        "name": "string",
+        "code": "string",
+        "description": "string",
+        "requiredSubmissions": "array of strings",
+        "startDate": "string (YYYY-MM-DD)",
+        "targetCompletionDate": "string (YYYY-MM-DD)",
+        "status": "string ('Active' | 'On Hold' | 'Completed')",
+        "createdAt": "string (ISO timestamp)",
+        "structuralLevels": "array of strings",
+        "structuralComponents": "array of strings"
+      }
+    },
+    "tickets": {
+      "description": "Submittal workflow tracking tickets and revisions",
+      "fields": {
+        "id": "string",
+        "projectId": "string",
+        "title": "string",
+        "itemNumber": "string",
+        "revision": "number",
+        "ticketCode": "string",
+        "status": "string",
+        "startDate": "string",
+        "targetSubmissionDate": "string",
+        "actualSubmissionDate": "string (optional)",
+        "thirdPartyResponseDate": "string (optional)",
+        "govSubmissionDate": "string (optional)",
+        "govResponseDate": "string (optional)",
+        "completionDate": "string (optional)",
+        "assignee": "string",
+        "remarks": "string (optional)",
+        "parentId": "string (optional)",
+        "structureLevel": "string",
+        "structureComponent": "string",
+        "history": "array of strings"
+      }
+    },
+    "hourLogs": {
+      "description": "Logged production hours for tracking drafting and engineering time",
+      "fields": {
+        "id": "string",
+        "ticketId": "string",
+        "hours": "number",
+        "date": "string (YYYY-MM-DD)",
+        "description": "string",
+        "user": "string"
+      }
+    },
+    "registryUsers": {
+      "description": "Members of the structural engineering team registry",
+      "fields": {
+        "id": "string",
+        "name": "string",
+        "email": "string",
+        "role": "string"
+      }
+    }
+  }
+}
